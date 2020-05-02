@@ -1,2 +1,2 @@
 # myProject
-Contains web development and back-end development code
+Code of my portfolio website.
