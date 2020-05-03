@@ -5,5 +5,5 @@ document.getElementById('darkMode').addEventListener('click',function(){
     var fontColor = style.getPropertyValue('--font-color');
     root.style.setProperty('--bg-color', bgColor.trim()=='white'? 'black':'white');
     root.style.setProperty('--font-color', fontColor.trim()=='white'? 'black':'white');
-    this.innerHTML = this.innerHTML=="Switch to light mode"? "Switch to dark mode": "Switch to light mode";
+    this.innerHTML = this.innerHTML=="light mode"? "dark mode": "light mode";
 });
