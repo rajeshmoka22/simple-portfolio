@@ -1,47 +1,84 @@
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Rajesh Moka</title>
-		<link rel="stylesheet" type="text/css" href="./styles/styles.css">
-	</head>
-	<body>
-		<div><span class="switch-dark" id="darkMode">light mode</span></div>
-		<section class="main-content" >
-			<section id="home">
-				<div class="content">
-					<div class="dev-name">Hi, I'm Rajesh. I design & build user interfaces.</div>
-					
-				</div>
-			</section>
-			<section class="about-link">
-				<div> Learn more about what I do </div>
-				<div class="arrow"> <a href="#about" class="down-arrow">></a></div>
-			</section>
-			<section id="about">
-				<div class="about-info">
-					<div>
-						<div class="dev-name">About me</div>
-					</div>
-					<div class="about-content">
-						<p>I'm Rajesh - A Frontend Developer for Tata consultancy services in Hyderabad, India. <br/> <br /></p>
-						<p>I have diverse set of skills, ranging from HTML+ CSS+ Javascript, all the way to React, Redux and little experience in Java. </p>
-					</div>
-				</div>
-				
-				<div class="contact-me">
-					<div class="find-text">
-						Find me on <br /> 
-					</div>
-					<div class="logo-container">
-						<a href="https://www.linkedin.com/in/rajesh-moka/" class="logo" target="_blank"><img class="linkedin logo"/></a>
-						<a href="https://www.github.com/rajeshmoka22" class="logo" target="_blank"><img class="github logo"/></a>
-					</div>
-				</div>
-			</section>
-		</section>
-		
-		<script type="text/javascript" src="./scripts/index.js"></script>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajesh Moka</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <main>
+    <div class="glass">
+      <div class="dashboard">
+        <div class="user">
+          <img src="avatar.PNG" alt="avatar">
+          <h3 class="username">Rajesh Moka</h3>
+          <div class="subtitle">Front End Developer | TCS</div>
+        </div>
+        <div class="links">
+          <div class="link active" name="projects">Projects</div>
+          <div class="link" name="about">About</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="projects">
+          <div class="project">
+            <img src="2048.PNG" alt="">
+            <div class="description">
+              <div class="title"><a href="https://2048-react.netlify.app" target="_blank">2048</a></div>
+              <div class="projectText">A web version of the popular 2048 mobile game.</div>
+            </div>
+          </div>
+          <div class="project">
+            <img src="todo.jpg" alt="">
+            <div class="description">
+              <div class="title"><a href="https://react-todo-plan.netlify.app" target="_blank">To-Do</a></div>
+              <div class="projectText">A To-Do application that lets user to manage their daily tasks.</div>
+              <div class="projectLink"></div>
+            </div>
+          </div>
+          <div class="project">
+            <img src="clock.PNG" alt="">
+            <div class="description">
+              <div class="title"><a href="https://javacript-clock.netlify.app" target="_blank">Clock</a></div>
+              <div class="projectText">A simple analogue clock using Vanilla Javascript, HTML, CSS.</div>
+              <div class="projectLink"></div>
+            </div>
+          </div>
+        </div>
+        <div class="about" style='display: none;'>
+          <h2 class="greeting">Hello, There!</h2>
+          <div class="intro">
+            I'm <strong class="name">Rajesh Moka</strong>. I am a Front End Developer at Tata Consulancy Services with 3+ years of Experience.
+          </div>
+          <div class="moreInfo">
+            I'm proficient in Javascript, HTML, CSS and ReactJS.
+          </div>
+          <div class="moreInfo">
+            Also I am good at Data structures, Algorithms and Problem Solving.
+          </div>
+          <div class="contact">
+            <div class="mail">
+              Reach out to me at <strong>rajeshmoka10@gmail.com</strong>
+            </div>
+            <div class="findme">
+              <div>Find me on</div>
+              <div class="social">
+                <a href="https://github.com/rajeshmoka22/" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                <a href="https://in.linkedin.com/in/rajesh-moka" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+</body>
+<script src="app.js"></script>
 </html>
