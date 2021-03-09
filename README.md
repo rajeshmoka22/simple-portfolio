@@ -1,2 +1,3 @@
-# myProject
-Code of my portfolio website.
+# Portfolio
+A simple portfolio website made using javascript, html, css.
+Have a look: https://rajeshmoka.netlify.app
