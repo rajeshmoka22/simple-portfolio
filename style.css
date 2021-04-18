@@ -105,10 +105,13 @@ main {
 
 .projects {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: stretch;
   margin: 1rem 0rem;
+  padding: 0.5rem;
   animation: pop-in 1.2s cubic-bezier(0.4, 0, 0.51, 1.22);
+  flex-wrap: wrap;
+  padding: 0.5rem;
 }
 
 .project img {
@@ -122,7 +125,7 @@ main {
 .project {
   background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-  margin: 1rem;
+  margin: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,6 +133,9 @@ main {
   border-radius: 0.5rem;
   height: auto;
   width: 15rem;
+  min-width: 200px;
+  color: #000;
+  text-decoration: none;
 }
 
 @keyframes pop-in {
@@ -149,7 +155,7 @@ main {
   border-radius: 1rem;
   color: #2c8286;
   line-height: 2rem;
-  animation: pop-in 1.2s ease-in-out;
+  /* animation: pop-in 1.2s ease-in-out; */
 }
 
 .greeting {
@@ -210,11 +216,10 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
-  .projects {
-    flex-wrap: wrap;
-  }
-
   .glass {
     width: 85%;
+  }
+  .projects {
+    justify-content: space-around;
   }
 }
