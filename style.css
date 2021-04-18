@@ -105,7 +105,7 @@ main {
 
 .projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
   margin: 1rem 0rem;
   padding: 0.5rem;
