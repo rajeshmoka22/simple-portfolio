@@ -133,7 +133,7 @@ main {
   border-radius: 0.5rem;
   height: auto;
   width: 15rem;
-  min-width: 200px;
+  min-width: 270px;
   color: #000;
   text-decoration: none;
 }
@@ -222,4 +222,12 @@ main {
   .projects {
     justify-content: space-around;
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.mail-to {
+  color: inherit;
 }
