@@ -1,98 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rajesh Moka</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="Rajesh Moka is a Senior Software Engineer and frontend-focused full-stack developer building modern web apps with React, TypeScript, Node.js, and cloud technologies.">
+  <meta name="keywords" content="Rajesh Moka, Senior Software Engineer, Staff Front End Developer, Frontend Developer, Full Stack Developer, React, TypeScript, JavaScript, Portfolio, Dubai, UAE, Singapore, Bangkok">
+  <meta name="author" content="Rajesh Moka">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#65dfc9">
+  <meta property="og:title" content="Rajesh Moka | Senior Software Engineer">
+  <meta property="og:description" content="Portfolio of Rajesh Moka featuring projects, engineering experience, and contact details.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/avatar.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rajesh Moka | Senior Software Engineer">
+  <meta name="twitter:description" content="Portfolio of Rajesh Moka featuring projects, engineering experience, and contact details.">
+  <meta name="twitter:image" content="./assets/avatar.webp">
+  <link rel="canonical" href="/">
+  <title>Rajesh Moka | Senior Software Engineer</title>
+  <link rel="icon" type="image/x-icon" href="./assets/avatar.webp">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      background: linear-gradient(to left top, #65dfc9, #6cdbeb);
+      min-height: 100vh;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .monospace-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .glass {
+      min-height: 75vh;
+      width: 80%;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+      border-radius: 1rem;
+      z-index: 2;
+      backdrop-filter: blur(1rem);
+    }
+
+    .circle1,
+    .circle2 {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+      position: absolute;
+    }
+
+    .circle1 {
+      top: 0%;
+      right: 5%;
+    }
+
+    .circle2 {
+      bottom: 0%;
+      left: 5%;
+    }
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      gap: 4px;
+    }
+
+    .user img {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 2px dashed #2395a0;
+    }
+
+    .username {
+      font-size: 24px;
+      color: #2c8286;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #2c8286;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+      border-radius: 1rem;
+    }
+
+    .links {
+      width: fit-content;
+      height: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 0.5rem;
+    }
+
+    .link {
+      font-size: 20px;
+      color: #2395a0;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0rem;
+      cursor: pointer;
+      border: 0.5px dashed #2395a0;
+      border-radius: 0.5rem;
+      outline: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    .link:hover {
+      opacity: 0.5;
+    }
+
+    .link.active {
+      color: white;
+      background: linear-gradient(to left top, #65dfc9, #6cdbeb);
+      border: none;
+    }
+
+    .active {
+      transition: all 100ms ease forwards;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      /* margin: 1rem 0rem; */
+      padding: 0.5rem;
+      animation: pop-in 0.5s cubic-bezier(0.4, 0, 0.51, 1.22);
+      flex-wrap: wrap;
+    }
+
+    .project img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      margin: 0.5rem 0rem;
+      background: linear-gradient(to left top, #65dfc9, #6cdbeb);
+    }
+
+    .project {
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+      box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+      margin: 0.5rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 0.5rem;
+      height: auto;
+      width: 15rem;
+      min-width: 270px;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .project .projectText {
+      font-size: 14px;
+    }
+
+    @keyframes pop-in {
+      100% {
+        width: 100%;
+      }
+    }
+
+    .about {
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+      box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 0.5rem;
+      color: #2c8286;
+      line-height: 2rem;
+    }
+
+    .greeting {
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-size: 24px;
+      color: #2c8286;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      width: fit-content;
+    }
+
+    .description {
+      margin: 1rem;
+    }
+
+    .title a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .title:hover {
+      text-decoration: underline;
+    }
+
+    .findme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+
+    .social a {
+      color: #2c8286;
+    }
+
+    .social a svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      vertical-align: middle;
+    }
+
+    .social a:hover svg {
+      transform: scale(1.2);
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .glass {
+        width: 85%;
+      }
+
+      .projects {
+        justify-content: space-around;
+      }
+    }
+
+    @media only screen and (max-width: 426px) {
+      .glass {
+        width: 90%;
+      }
+
+      .project {
+        width: 100%;
+      }
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .mail-to {
+      color: inherit;
+    }
+  </style>
 </head>
+
 <body>
   <main>
     <div class="glass">
       <div class="dashboard">
         <div class="user">
-          <img src="avatar.jpeg" alt="avatar">
+          <img src="./assets/avatar.webp" alt="avatar" fetchpriority="high" loading="eager">
           <h3 class="username">Rajesh Moka</h3>
-          <div class="subtitle">Front End Developer | EPAM Systems</div>
+          <p class="subtitle">Senior Software Engineer | Kuehne Nagel</p>
+          <div class="social">
+            <a aria-label="link to GitHub profile" href="https://github.com/rajeshmoka22">GitHub</a>
+            <a aria-label="link to LinkedIn profile" href="https://linkedin.com/in/rajesh-moka">LinkedIn</a>
+          </div>
         </div>
-        <div class="links">
-          <div class="link active" name="projects">Projects</div>
-          <div class="link" name="about">About</div>
+        <div class="links" role="tablist" aria-label="Portfolio sections">
+          <button class="link active" id="projects-tab" type="button" name="projects" aria-label="Show projects"
+            aria-selected="true" aria-controls="projects-panel" role="tab">Projects</button>
+          <button class="link" id="about-tab" type="button" name="about" aria-label="Show about section"
+            aria-selected="false" aria-controls="about-panel" role="tab">About</button>
         </div>
       </div>
       <div class="content">
-        <div class="projects">
-          <a class="project" href="https://2048-react.netlify.app" target="_blank">
-            <img src="2048.webp" alt="">
+        <div class="projects" id="projects-panel" role="tabpanel" aria-labelledby="projects-tab">
+          <a class="project" href="https://2048-react.netlify.app" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/2048.webp" alt="2048 Logo" loading="lazy">
             <div class="description">
-              <div class="title">2048</div>
-              <div class="projectText">A web version of the popular 2048 mobile game.</div>
+              <h4 class="title">2048</h4>
+              <p class="projectText">A web version of the popular 2048 mobile game.</p>
             </div>
           </a>
-          <a class="project" href="https://moviesearch-rajeshmoka22.netlify.app/" target="_blank">
-            <img src="Movies.webp" alt="">
+          <a class="project" href="https://manage-money.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/goldcoin.webp" alt="Expense Manager Logo" loading="lazy">
             <div class="description">
-              <div class="title">Movie Box</div>
-              <div class="projectText">An application to search your favorite movies and details.</div>
+              <h4 class="title">Expense Manager</h4>
+              <p class="projectText">A web application to manage and track expenses.</p>
             </div>
           </a>
-          <a class="project" href="https://starbucks-rewards.netlify.app/" target="_blank">
-            <img src="starbucksLogo.webp" alt="">
+          <a class="project" href="https://dog-gpt.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/doggy.webp" alt="Dog GPT Logo" loading="lazy">
             <div class="description">
-              <div class="title">Starbucks Clone</div>
-              <div class="projectText">A Simple clone of Starbucks rewards webpage.</div>
+              <h4 class="title">Dog GPT</h4>
+              <p class="projectText">A web application with cute dog photos in gpt mode.</p>
             </div>
           </a>
-          <a class="project" href="https://kanbanboard-react.netlify.app/" target="_blank">
-            <img src="Kanban.webp" alt="">
+          <a class="project" href="https://moviesearch-rajeshmoka22.netlify.app/" target="_blank"
+            rel="noopener noreferrer">
+            <img src="./assets/Movies.webp" alt="Movies Logo" loading="lazy">
             <div class="description">
-              <div class="title">Kanban Board</div>
-              <div class="projectText">A simple task manager to manage your project development tasks.</div>
+              <h4 class="title">Movie Box</h4>
+              <p class="projectText">An application to search your favorite movies and details.</p>
             </div>
           </a>
-          <a class="project" href="https://react-todo-plan.netlify.app" target="_blank">
-            <img src="todo.jpg" alt="">
+          <a class="project" href="https://fake-sb-rewards-clone-for-projects.netlify.app/" target="_blank"
+            rel="noopener noreferrer">
+            <img src="./assets/starbucksLogo.webp" alt="Starbucks Logo" loading="lazy">
             <div class="description">
-              <div class="title">To-Do</div>
-              <div class="projectText">A To-Do application that lets user to manage their daily tasks.</div>
+              <h4 class="title">Starbucks Clone</h4>
+              <p class="projectText">A Simple clone of Starbucks rewards webpage.</p>
+            </div>
+          </a>
+          <a class="project" href="https://kanbanboard-react.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/Kanban.webp" alt="Kanban Board Logo" loading="lazy">
+            <div class="description">
+              <h4 class="title">Kanban Board</h4>
+              <p class="projectText">A simple task manager to manage your project development tasks.</p>
+            </div>
+          </a>
+          <a class="project" href="https://react-todo-plan.netlify.app" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/todo.webp" alt="To-Do Logo" loading="lazy">
+            <div class="description">
+              <h4 class="title">To-Do</h4>
+              <p class="projectText">A To-Do application that lets user to manage their daily tasks.</p>
+            </div>
+          </a>
+          <a class="project" href="https://javacript-clock.netlify.app" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/clock.webp" alt="Clock Logo" loading="lazy">
+            <div class="description">
+              <h4 class="title">Clock</h4>
+              <p class="projectText">A simple analogue clock using Vanilla Javascript, HTML, CSS.</p>
               <div class="projectLink"></div>
             </div>
           </a>
-          <a class="project" href="https://javacript-clock.netlify.app" target="_blank">
-            <img src="clock.webp" alt="">
-            <div class="description">
-              <div class="title">Clock</div>
-              <div class="projectText">A simple analogue clock using Vanilla Javascript, HTML, CSS.</div>
-              <div class="projectLink"></div>
-            </div>
-          </div>
-        </a>
-        <div class="about" style='display: none;'>
+        </div>
+        <div class="about" id="about-panel" style='display: none;' role="tabpanel" aria-labelledby="about-tab" hidden>
           <h2 class="greeting">Hello, There!</h2>
-          <div class="intro">
-            I'm <strong class="name">Rajesh Moka</strong>. I am a Front End Developer at EPAM Systems with 5+ years of Experience.
-          </div>
-          <div class="moreInfo">
-            I'm proficient in ReactJs, Redux, Mobx, Javascript, HTML, CSS.
-          </div>
-          <div class="moreInfo">
-            Also I am good at Data structures, Algorithms and Problem Solving.
-          </div>
+          <ul style="padding: 0rem 1rem; list-style-type: square; line-height: 2rem;">
+            <li>I am a Senior Software Engineer at Kuehne Nagel with 9 years of experience in software development.</li>
+            <li><strong>Frontend:</strong> ReactJS, Redux, Vuejs, NuxtJS, TypeScript, JavaScript, Zustand, MobX, HTML, CSS, Tailwind, Webpack, Vite</li>
+            <li><strong>Backend:</strong> Golang, Java, Spring Boot, Node.js, Prisma, GraphQL, SQL</li>
+            <li><strong>Cloud:</strong> AWS, Cloudfront, Elasticache, ECS, WAF, ALB, Terraform, Docker</li>
+            <li><strong>Tools:</strong> Git, Data Structures, Algorithms, and Problem Solving</li>
+          </ul>
+         
           <div class="contact">
-            <div class="mail">
-              Reach out to me at <a href="mailto:rajeshmoka10@gmail.com" class="cursor-pointer mail-to">rajeshmoka10@gmail.com</a>
-            </div>
-            <div class="findme">
-              <div>Find me on</div>
-              <div class="social">
-                <a href="https://github.com/rajeshmoka22/" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-                <a href="https://in.linkedin.com/in/rajesh-moka" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-              </div>
-            </div>
+            <p class="mail">
+              Reach out to me at <a href="mailto:rajeshmokatech@gmail.com"
+                class="cursor-pointer mail-to">rajeshmokatech@gmail.com</a>
+            </p>
           </div>
         </div>
       </div>
@@ -101,5 +381,34 @@
   <div class="circle1"></div>
   <div class="circle2"></div>
 </body>
-<script src="app.js"></script>
+<script>
+  const links = document.querySelectorAll('.link');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(item => {
+        item.classList.remove('active');
+        item.setAttribute('aria-selected', 'false');
+      });
+
+      link.classList.add('active');
+      link.setAttribute('aria-selected', 'true');
+
+      const projectsPanel = document.querySelector('.projects');
+      const aboutPanel = document.querySelector('.about');
+
+      if (link.getAttribute('name') === 'projects') {
+        projectsPanel.style.display = '';
+        projectsPanel.removeAttribute('hidden');
+        aboutPanel.style.display = 'none';
+        aboutPanel.setAttribute('hidden', '');
+      } else {
+        projectsPanel.style.display = 'none';
+        projectsPanel.setAttribute('hidden', '');
+        aboutPanel.style.display = '';
+        aboutPanel.removeAttribute('hidden');
+      }
+    });
+  });
+</script>
+
 </html>
